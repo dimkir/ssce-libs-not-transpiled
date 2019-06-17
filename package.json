@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build:babel": "rm -rf dist/*; mkdir -p dist; babel src/*.js -d dist",
+    "build:babel:index": "rm -rf dist/*; mkdir -p dist; babel src/index.js --out-file dist/index.js",
+    "build:babel:auto-bind": "rm -rf dist/*; mkdir -p dist/auto-bind ; babel node_modules/auto-bind/*.js -d dist/auto-bind"
+
+  },
   "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "auto-bind": "^2.1.0"
   }
 }
