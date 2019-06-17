@@ -6,13 +6,18 @@
   "scripts": {
     "build:babel": "rm -rf dist/*; mkdir -p dist; babel src/*.js -d dist",
     "build:babel:index": "rm -rf dist/*; mkdir -p dist; babel src/index.js --out-file dist/index.js",
-    "build:babel:auto-bind": "rm -rf dist/*; mkdir -p dist/auto-bind ; babel node_modules/auto-bind/*.js -d dist/auto-bind"
-
+    "build:babel:auto-bind": "rm -rf dist/*; mkdir -p dist/auto-bind ; babel node_modules/auto-bind/*.js -d dist/auto-bind",
+    "build:webpack:prod": "rm -rf dist/*; mkdir -p dist; webpack --mode production && es-check es5 dist/main.js"
   },
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "auto-bind": "^2.1.0"
+  },
+  "devDependencies": {
+    "es-check": "^5.0.0",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
   }
 }
