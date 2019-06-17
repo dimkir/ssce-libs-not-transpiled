@@ -9,7 +9,7 @@ module.exports = {
             // modules: 'cjs', // I added cjs because of complaning on non existing exports object (debug/browser.js was complaining)
             // useBuiltIns: 'entry',
             // useBuiltIns: 'usage', // still serialize-error doesn't get transpiled correctly
-            targets: '>1%, ie 11'.split(','),
+            targets: 'ie 11'.split(','),
         }]
     ]
 }
